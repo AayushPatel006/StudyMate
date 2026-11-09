@@ -1,0 +1,6 @@
+{
+  "spec_dir": "spec",
+  "spec_files": ["integration/**/*.spec.js"],
+  "helpers": ["helpers/env.js"],
+  "env": { "random": false, "stopSpecOnExpectationFailure": false }
+}
