@@ -1,0 +1,22 @@
+{
+  "name": "studymate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "StudyMate — An Agentic AI-Powered Study Planner and Task Management Assistant (Midterm MVP, Phase 1)",
+  "engines": { "node": ">=20.0.0" },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently -n api,web -c blue,magenta \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "start": "concurrently -n api,web -c blue,magenta \"npm start --prefix backend\" \"npm run dev --prefix frontend\"",
+    "seed": "npm run seed --prefix backend",
+    "test": "npm test --prefix backend",
+    "test:unit": "npm run test:unit --prefix backend",
+    "test:integration": "npm run test:integration --prefix backend",
+    "test:acceptance": "npm run test:acceptance --prefix backend",
+    "build": "npm run build --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  }
+}
